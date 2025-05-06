@@ -17,5 +17,5 @@ print("Classification accuracy report\n",
       )
 
 # present neural networks's accuracy in a confusion matrix
-metrics.plot_confusion_matrix(clf, digits_X_test, digits_y_test)
+metrics.ConfusionMatrixDisplay.from_predictions(digits_y_test, clf.predict(digits_X_test))
 plt.show()
